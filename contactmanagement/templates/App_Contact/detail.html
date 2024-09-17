@@ -1,0 +1,18 @@
+{% extends "base.html" %} {% block title %} Contact Details {% endblock title %}
+
+<div>{% load tailwind_filters %} {% load crispy_forms_tags %}</div>
+
+{% block content %}
+
+<div
+  class="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 p-5"
+>
+  <ul>
+    <li>Name : {{object.first_name}} {{object.last_name}}</li>
+    <li>Last Name : {{object.last_name}}</li>
+    <li>Phone Number : {{object.phone}}</li>
+    <li>Email : {{object.email}}</li>
+    <li>Address : {{object.address}}</li>
+  </ul>
+</div>
+{% endblock content %}

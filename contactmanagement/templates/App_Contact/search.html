@@ -1,0 +1,13 @@
+{% extends "base.html" %} {% block title %}Edit Contact {% endblock title %}
+
+<div>{% load tailwind_filters %} {% load crispy_forms_tags %}</div>
+
+{% block content %}
+
+<div class="p-5">
+  <form method="GET" action="{% url 'search' %}">
+    <input type="text" name="q" placeholder="Search by name or email" />
+    <button type="submit">Search</button>
+  </form>
+</div>
+{% endblock content %}
